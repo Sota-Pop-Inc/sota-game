@@ -66,9 +66,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 704.9296875,
-			"y": 1044.7695849609374,
-			"lastActivityTimestamp": 1710012380635,
+			"x": -102.636474609375,
+			"y": -119.29999511718756,
+			"lastActivityTimestamp": 1710013751031,
 			"meta": {}
 		},
 		{
@@ -79,9 +79,9 @@
 			"typeName": "page"
 		},
 		{
-			"x": 0,
-			"y": -490.26177246093744,
-			"z": 1,
+			"x": 911.667724609375,
+			"y": 454.01874511718756,
+			"z": 0.5,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -219,8 +219,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 58.17578125,
-			"y": -350.38359375000005,
+			"x": 32.24609375,
+			"y": -334.71953125000005,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
