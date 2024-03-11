@@ -6,15 +6,27 @@ function moveChar(direction) {
   switch(direction) {
   case 'ArrowLeft':
     GameContents.mainChar.coordinates.x -= speed;
+    GameContents.mainChar.bottomRight.x -= speed;
+    collectKey();
+    useDoor();
     break;
   case 'ArrowRight':
     GameContents.mainChar.coordinates.x += speed;
+    GameContents.mainChar.bottomRight.x += speed;
+    collectKey();
+    useDoor();
     break;
   case 'ArrowUp':
     GameContents.mainChar.coordinates.y -= speed;
+    GameContents.mainChar.bottomRight.y -= speed;
+    collectKey();
+    useDoor();
     break;
   case 'ArrowDown':
     GameContents.mainChar.coordinates.y += speed;
+    GameContents.mainChar.bottomRight.y += speed;
+    collectKey();
+    useDoor();
   }
   console.log('Character coordinates updated : ' + GameContents.mainChar.coordinates.x + ',' + GameContents.mainChar.coordinates.y);
 }
