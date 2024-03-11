@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 let GameContents = {
   mainChar: {
@@ -10,7 +10,7 @@ let GameContents = {
   key: {
     coordinates: {}
   }
-}
+};
 
 loadLevel();
 renderPage();
