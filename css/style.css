@@ -12,10 +12,3 @@
   position: absolute;
   z-index: 1;
 }
-
-.main {
-  background-image: url(../assets/background/Background650x650.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
