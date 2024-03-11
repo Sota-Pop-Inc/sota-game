@@ -8,6 +8,40 @@ body, html {
   overflow: hidden;
 }
 
+header {
+  justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  height: 100px;
+  background-color: darkolivegreen; 
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+header li {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: larger;
+  padding: 20px;
+}
+
+a:visited { 
+  color: white;
+}
 .wall {
   position: absolute;
 }
