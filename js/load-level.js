@@ -10,8 +10,8 @@ function loadChar () {
   let mainElement = document.getElementById('main');
   mainElement.appendChild(char);
 
-  GameContents.mainChar.coordinates.x = 0;
-  GameContents.mainChar.coordinates.y = 0;
+  GameContents.mainChar.coordinates.x = 8;
+  GameContents.mainChar.coordinates.y = 8;
   GameContents.mainChar.bottomRight.x = GameContents.mainChar.width;
   GameContents.mainChar.bottomRight.y = GameContents.mainChar.height;
 }
