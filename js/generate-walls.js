@@ -54,4 +54,11 @@ function generateWalls(seed) {
       new Wall(orientation, row, column);
     }
   }
+
+  for (let i = 0; i < 16; i++) {
+    new Wall('hori', 0, i);
+    new Wall('hori', 16, i);
+    new Wall('vert', i, 0);
+    new Wall('vert', i, 16);
+  }
 }
