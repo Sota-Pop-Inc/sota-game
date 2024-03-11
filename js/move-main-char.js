@@ -16,9 +16,11 @@ function moveChar(direction) {
   case 'ArrowDown':
     GameContents.mainChar.coordinates.y += speed;
   }
+  console.log('Character coordinates updated : ' + GameContents.mainChar.coordinates.x + ',' + GameContents.mainChar.coordinates.y);
 }
 
 document.addEventListener('keydown', function(event) {
+  console.log('Movement triggered');
   moveChar(event.key);
   renderPage();
 });
