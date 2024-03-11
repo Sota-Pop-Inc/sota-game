@@ -52,7 +52,6 @@ function loadLevel() {
   loadChar();
   loadDoor();
   loadKey();
-  // loadWall();
   let seed = '';
   for (let i = 0; i < 480; i++) {
     seed += Math.floor(2 * Math.random());
