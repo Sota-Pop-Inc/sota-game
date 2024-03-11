@@ -13,6 +13,16 @@
   z-index: 1;
 }
 
-#wall {
-  position: absolute;
+#main {
+  height: 650px;
+  width: 650px;
+  position: relative;
+}
+
+#background-image {
+  z-index: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 650px 650px;
+
 }
