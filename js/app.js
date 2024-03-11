@@ -31,7 +31,8 @@ let GameContents = {
     width: 32,
     height: 8,
     bottomRight: {}
-  }
+  },
+  walls: []
 };
 
 console.log('wowee imma boutta load the level');
