@@ -1,6 +1,16 @@
 'use strict'
 
-loadChar();
-loadDoor();
-loadKey();
+let GameContents = {
+  mainChar: {
+    coordinates: {}
+  },
+  door: {
+    coordinates: {}
+  },
+  key: {
+    coordinates: {}
+  }
+}
+
+loadLevel();
 renderPage();
