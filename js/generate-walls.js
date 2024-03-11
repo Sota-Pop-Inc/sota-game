@@ -18,8 +18,8 @@ function Wall(orientation, row, column) {
   }
 
   this.bottomRight = {
-    x: this.coordinates.x + this.width,
-    y: this.coordinates.y + this.height
+    x: this.coordinates.x + this.width - 1,
+    y: this.coordinates.y + this.height - 1
   };
 
   let wall = document.createElement('img');
@@ -40,16 +40,16 @@ function generateWalls(seed) {
   for (let i = 0; i < 480; i++) {
     if (seed[i] === '1') {
       let orientation;
-      let row = Math.floor((i + 1) / 15);
-      let column = i % 15;
+      let row;
+      let column;
       if (i < 240) {
         orientation = 'vert';
-        row = Math.floor((i + 1) / 15);
-        column = i % 15;
+        row = i % 16;
+        column = i % 15 + 1;
       } else {
         orientation = 'hori';
-        row = Math.floor((i + 1) / 15) - 16;
-        column = i % 15;
+        row = i % 15 + 1;
+        column = i % 16;
       }
       new Wall(orientation, row, column);
     }
