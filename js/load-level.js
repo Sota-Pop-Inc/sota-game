@@ -1,7 +1,9 @@
+'use strict';
+
 function loadChar () {
   let char = document.createElement('img');
-  
-  char.id = 'mainChar'
+
+  char.id = 'mainChar';
   char.src = 'mainChar.jpg';
   char.alt = 'Main Character';
 
@@ -11,8 +13,8 @@ function loadChar () {
 
 function loadDoor () {
   let door = document.createElement('img');
-  
-  door.id = 'door'
+
+  door.id = 'door';
   door.src = 'door.jpg';
   door.alt = 'Door';
 
@@ -22,8 +24,8 @@ function loadDoor () {
 
 function loadKey () {
   let key = document.createElement('img');
-  
-  key.id = 'key'
+
+  key.id = 'key';
   key.src = 'key.jpg';
   key.alt = 'Key';
 
