@@ -9,8 +9,6 @@ function moveChar(XorY, signFirst, signSecond) {
     if (checkSpecCollision(GameContents.walls[i])) {
       GameContents.mainChar.coordinates[XorY] += speed * signSecond;
       GameContents.mainChar.bottomRight[XorY] += speed * signSecond;
-      console.log(GameContents.walls[i].coordinates);
-      console.log(GameContents.walls[i].bottomRight);
     }
   }
   collectKey();
