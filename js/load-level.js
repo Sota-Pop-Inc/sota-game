@@ -4,7 +4,7 @@ function loadChar () {
   let char = document.createElement('img');
 
   char.id = 'mainChar';
-  char.src = 'mainChar.jpg';
+  char.src = 'mainChar.png';
   char.alt = 'Main Character';
 
   let mainElement = document.querySelector('main');
