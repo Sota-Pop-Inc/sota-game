@@ -4,7 +4,7 @@ function loadChar () {
   let char = document.createElement('img');
 
   char.id = 'mainChar';
-  char.src = 'assets/character/mainChar.png';
+  char.src = 'assets/character/Hero32x32.png';
   char.alt = 'Main Character';
 
   let mainElement = document.getElementById('main');
@@ -55,12 +55,13 @@ function loadWall() {
   wall.src = 'assets/props/wallVert.png';
   wall.alt = 'Wall';
 
-  document.main.appendchild(wall);
+  let mainElement = document.getElementById('main');
+  mainElement.appendChild(wall);
 
   GameContents.wallVert.coordinates.x = 700;
   GameContents.wallVert.coordinates.y = 500;
   GameContents.wallVert.bottomRight.x = GameContents.wallVert.coordinates.x + GameContents.wallVert.width;
-  GameContents.wallVert.bottomRight.y = GameContents.wallVert.bottomRight.y + GameContents.wallVert.height;
+  GameContents.wallVert.bottomRight.y = GameContents.wallVert.coordinates.y + GameContents.wallVert.height;
 }
 
 function loadLevel() {
