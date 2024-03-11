@@ -1,28 +1,60 @@
-#mainChar {
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wall {
+  position: absolute;
+}
+  
+  #mainChar {
   position: absolute;
   z-index: 100;
 }
 
 #door {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
 }
 
 #key {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 
 #main {
-  height: 650px;
-  width: 650px;
   position: relative;
+  width: 648px; 
+  height: 648px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
 }
 
 #background-image {
   z-index: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 650px 650px;
+  width: 100%;
+  height: auto;
+  display: block; 
+  position: relative;
+}
 
+main::after {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../assets/background/Outline_Background650x650.png'); 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  pointer-events: none; 
 }

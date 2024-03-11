@@ -26,7 +26,7 @@ function loadDoor () {
   let mainElement = document.getElementById('main');
   mainElement.appendChild(door);
 
-  GameContents.door.coordinates.x = 1200;
+  GameContents.door.coordinates.x = 300;
   GameContents.door.coordinates.y = 300;
   GameContents.door.bottomRight.x = GameContents.door.coordinates.x + GameContents.door.width;
   GameContents.door.bottomRight.y = GameContents.door.bottomRight.y + GameContents.door.height;
