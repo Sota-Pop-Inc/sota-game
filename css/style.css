@@ -12,3 +12,7 @@
   position: absolute;
   z-index: 1;
 }
+
+#wall {
+  position: absolute;
+}
