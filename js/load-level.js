@@ -12,6 +12,8 @@ function loadChar () {
 
   GameContents.mainChar.coordinates.x = 0;
   GameContents.mainChar.coordinates.y = 0;
+  GameContents.mainChar.bottomRight.x = GameContents.mainChar.width;
+  GameContents.mainChar.bottomRight.y = GameContents.mainChar.height;
 }
 
 function loadDoor () {
@@ -26,6 +28,8 @@ function loadDoor () {
 
   GameContents.door.coordinates.x = 1200;
   GameContents.door.coordinates.y = 300;
+  GameContents.door.bottomRight.x = GameContents.door.coordinates.x + GameContents.door.width;
+  GameContents.door.bottomRight.y = GameContents.door.bottomRight.y + GameContents.door.height;
 }
 
 function loadKey () {
@@ -40,6 +44,8 @@ function loadKey () {
 
   GameContents.key.coordinates.x = 200;
   GameContents.key.coordinates.y = 500;
+  GameContents.key.bottomRight.x = GameContents.key.coordinates.x + GameContents.key.width;
+  GameContents.key.bottomRight.y = GameContents.key.bottomRight.y + GameContents.key.height;
 }
 
 function loadLevel() {

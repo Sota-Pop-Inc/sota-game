@@ -5,7 +5,8 @@ let GameContents = {
     coordinates: {},
     width: 32,
     height: 32,
-    bottomRight: {}
+    bottomRight: {},
+    inventory: []
   },
   door: {
     coordinates: {},
@@ -24,8 +25,8 @@ let GameContents = {
     width: 8,
     height: 32,
     bottomRight: {}
-  }
-  wallHor: {
+  },
+  wallHori: {
     coordinates: {},
     width: 32,
     height: 8,
