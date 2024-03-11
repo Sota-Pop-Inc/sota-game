@@ -7,13 +7,4 @@ function loadDoor () {
 
     let mainElement = document.querySelector('main');
     mainElement.appendChild(door);
-
-}
-loadDoor();
-
-let door = {
-    coordinates: {
-        x: value,
-        y: value
-    }
 }
