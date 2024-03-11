@@ -2,13 +2,34 @@
 
 let GameContents = {
   mainChar: {
-    coordinates: {}
+    coordinates: {},
+    width: 32,
+    height: 32,
+    bottomRight: {}
   },
   door: {
-    coordinates: {}
+    coordinates: {},
+    width: 32,
+    height: 32,
+    bottomRight: {}
   },
   key: {
-    coordinates: {}
+    coordinates: {},
+    width: 16,
+    height: 16,
+    bottomRight: {}
+  },
+  wallVert: {
+    coordinates: {},
+    width: 8,
+    height: 32,
+    bottomRight: {}
+  }
+  wallHor: {
+    coordinates: {},
+    width: 32,
+    height: 8,
+    bottomRight: {}
   }
 };
 
