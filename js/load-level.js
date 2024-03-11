@@ -48,8 +48,24 @@ function loadKey () {
   GameContents.key.bottomRight.y = GameContents.key.bottomRight.y + GameContents.key.height;
 }
 
+function loadWall() {
+  let wall = document.createElement('img');
+
+  wall.id = 'wall';
+  wall.src = 'assets/props/wallVert.png';
+  wall.alt = 'Wall';
+
+  document.main.appendchild(wall);
+
+  GameContents.wallVert.coordinates.x = 700;
+  GameContents.wallVert.coordinates.y = 500;
+  GameContents.wallVert.bottomRight.x = GameContents.wallVert.coordinates.x + GameContents.wallVert.width;
+  GameContents.wallVert.bottomRight.y = GameContents.wallVert.bottomRight.y + GameContents.wallVert.height;
+}
+
 function loadLevel() {
   loadChar();
   loadDoor();
   loadKey();
+  loadWall();
 }
