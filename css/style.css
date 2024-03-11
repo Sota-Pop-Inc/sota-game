@@ -1,5 +1,14 @@
 #mainChar {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  z-index: 100;
+}
+
+#door {
+  position: absolute;
+  z-index: 1;
+}
+
+#key {
+  position: absolute;
+  z-index: 1;
 }
