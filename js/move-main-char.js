@@ -1,6 +1,6 @@
 'use strict';
 
-let speed = 1;
+let speed = 10;
 
 function moveChar(direction) {
   switch(direction) {
