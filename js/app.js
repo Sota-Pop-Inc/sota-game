@@ -16,8 +16,8 @@ let GameContents = {
   },
   key: {
     coordinates: {},
-    width: 16,
-    height: 16,
+    width: 32,
+    height: 32,
     bottomRight: {}
   },
   wallVert: {
@@ -32,7 +32,8 @@ let GameContents = {
     height: 8,
     bottomRight: {}
   },
-  walls: []
+  walls: [],
+  grid: []
 };
 
 console.log('wowee imma boutta load the level');
