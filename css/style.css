@@ -5,25 +5,26 @@
 
 nav li {
   font-family: 'Alkhemikal', sans-serif; 
-  color: black;
 }
+
+@font-face {
+  font-family:'Early GameBoy';
+  src: url('../assets/fonts/Early\ GameBoy.ttf');
+}
+
+
 body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  overflow:visible;
 }
 
 body {
-background-image: url('/assets/background/BackgroundSeamless.png');
+  background-image: url('/assets/background/BackgroundSeamless.png');
   background-size: cover; 
   background-position: center; 
   background-repeat: repeat;
-  margin: 0; 
-  height: 100%; 
 }
 
 header {
@@ -36,7 +37,6 @@ header {
   width: 100%;
   z-index: 1001;
   height: 75px;
-  
   background-image: url('../assets/background/HeaderBackgroundV2.png');
   background-size: cover; 
   background-repeat: no-repeat; 
@@ -109,15 +109,23 @@ nav a:visited {
   z-index: 2;
 }
 
+.content-container {
+  display: flex;
+  justify-content: center; /* Center the main content */
+  align-items: start; /* Align to the top */
+  height: calc(100% - 75px); /* Adjust height accounting for header */
+  padding-left: 75px;
+  padding-top: 75px; /* Offset for the fixed header */
+}
+
 #main {
-  margin-top: 100px;
   position: relative;
   width: 648px; 
   height: 648px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
+  z-index: 1;
 }
 
 #background-image {
@@ -140,4 +148,23 @@ main::after {
   background-repeat: no-repeat;
   background-size: cover; 
   pointer-events: none; 
+}
+#sidePanel {
+  width: 200px; /* Adjust based on your preference */
+  height: 100%; /* Full height of its container */
+  background-image: url('../assets/background/MENU\ TABLE.png'); 
+  background-size: contain; /* Ensure the full image is visible */
+  background-repeat: no-repeat;
+  margin-left: 50px; /* Space between main and side panel */
+}
+#sidePanel h1 {
+  font-family: 'Alkhemikal', sans-serif; 
+  color: #FFFFFF;
+  font-size: medium;
+}
+
+#sidePanel button {
+  font-family: 'Alkhemikal', sans-serif; 
+  color: black;
+  font-size: smaller;
 }
