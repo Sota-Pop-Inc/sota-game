@@ -2,14 +2,37 @@
 
 let GameContents = {
   mainChar: {
-    coordinates: {}
+    coordinates: {},
+    width: 32,
+    height: 32,
+    bottomRight: {},
+    inventory: []
   },
   door: {
-    coordinates: {}
+    coordinates: {},
+    width: 32,
+    height: 32,
+    bottomRight: {}
   },
   key: {
-    coordinates: {}
-  }
+    coordinates: {},
+    width: 16,
+    height: 16,
+    bottomRight: {}
+  },
+  wallVert: {
+    coordinates: {},
+    width: 8,
+    height: 32,
+    bottomRight: {}
+  },
+  wallHori: {
+    coordinates: {},
+    width: 32,
+    height: 8,
+    bottomRight: {}
+  },
+  walls: []
 };
 
 console.log('wowee imma boutta load the level');

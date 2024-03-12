@@ -11,4 +11,12 @@ function renderPage() {
   doorHTML.style.top = GameContents.door.coordinates.y + 'px';
   keyHTML.style.left = GameContents.key.coordinates.x + 'px';
   keyHTML.style.top = GameContents.key.coordinates.y + 'px';
+
+  for (let i = 0; i < GameContents.walls.length; i++) {
+    const newWallHTML = document.getElementById('wall-' + i);
+    newWallHTML.style.left = GameContents.walls[i].coordinates.x + 'px';
+    newWallHTML.style.top = GameContents.walls[i].coordinates.y + 'px';
+  }
+
+  console.log('rendered');
 }
