@@ -17,10 +17,13 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow:visible;
+  overflow: hidden;
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url('/assets/background/BackgroundSeamless.png');
   background-size: cover; 
   background-position: center; 
@@ -54,7 +57,7 @@ header ul {
   align-items: center;
   list-style-type: none;
   padding: 0;
-  margin: 20px; 
+  margin: 20px;
 }
 
 header li {
@@ -109,22 +112,10 @@ nav a:visited {
   z-index: 2;
 }
 
-.content-container {
-  display: flex;
-  justify-content: center; /* Center the main content */
-  align-items: start; /* Align to the top */
-  height: calc(100% - 75px); /* Adjust height accounting for header */
-  padding-left: 75px;
-  padding-top: 75px; /* Offset for the fixed header */
-}
-
 #main {
-  position: relative;
   width: 648px; 
   height: 648px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   z-index: 1;
 }
 
@@ -149,14 +140,23 @@ main::after {
   background-size: cover; 
   pointer-events: none; 
 }
+
 #sidePanel {
+  position: fixed; /* Use fixed positioning to place it independently */
+  top: 0; /* Align to the top */
+  right: 0; /* Float to the right */
   width: 200px; /* Adjust based on your preference */
-  height: 100%; /* Full height of its container */
+  height: 100%; /* Full viewport height */
   background-image: url('../assets/background/MENU\ TABLE.png'); 
-  background-size: contain; /* Ensure the full image is visible */
+  background-size: contain; /* Ensure the full image is visible and covers the panel */
   background-repeat: no-repeat;
-  margin-left: 50px; /* Space between main and side panel */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+
 }
+
 #sidePanel h1 {
   font-family: 'Alkhemikal', sans-serif; 
   color: #FFFFFF;
