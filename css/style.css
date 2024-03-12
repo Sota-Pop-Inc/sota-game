@@ -1,3 +1,12 @@
+@font-face {
+  font-family:'Alkhemikal';
+  src: url('../assets/fonts/Alkhemikal.ttf');
+}
+
+nav li {
+  font-family: 'Alkhemikal', sans-serif; 
+  color: black;
+}
 body, html {
   height: 100%;
   margin: 0;
@@ -15,9 +24,12 @@ header {
   left: 0;
   width: 100%;
   z-index: 1001;
-  height: 100px;
+  height: 75px;
   margin-bottom: 20px;
-  background-color: darkolivegreen; 
+  background-image: url('../assets/background/HeaderBackgroundV2.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
 }
 
 header ul {
