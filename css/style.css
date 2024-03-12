@@ -93,8 +93,12 @@ nav a:visited {
 .wall {
   position: absolute;
 }
+
+.junction {
+  position: absolute;
+}
   
-  #mainChar {
+#mainChar {
   position: absolute;
   z-index: 100;
 }

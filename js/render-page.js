@@ -18,5 +18,11 @@ function renderPage() {
     newWallHTML.style.top = GameContents.walls[i].coordinates.y + 'px';
   }
 
+  for (let i = 0; i < GameContents.junctions.length; i++) {
+    const newJunctionHTML = document.getElementById('junction-' + i);
+    newJunctionHTML.style.left = GameContents.junctions[i].coordinates.x + 'px';
+    newJunctionHTML.style.top = GameContents.junctions[i].coordinates.y + 'px';
+  }
+
   console.log('rendered');
 }

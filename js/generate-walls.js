@@ -52,7 +52,7 @@ function Wall(orientation, column, row) {
   GameContents.walls.push(this);
 }
 
-function generateMazeDFS() {
+function loadWalls() {
   let vertWalls = [];
   for (let i = 0; i < 17; i++) {
     vertWalls.push([]);
@@ -109,6 +109,37 @@ function generateMazeDFS() {
       if (horiWalls[i][j]) {
         new Wall('hori', i, j);
       }
+    }
+  }
+}
+
+function Junction(column, row) {
+  this.coordinates = {
+    x: (column + 1) * 40,
+    y: (row + 1) * 40
+  };
+  this.bottomRight = {
+    x: this.coordinates.x + 7,
+    y: this.coordinates.y + 7
+  };
+
+  let junction = document.createElement('img');
+
+  junction.id = 'junction-' + GameContents.junctions.length;
+  junction.className = 'junction';
+  junction.src = 'assets/props/junction.png';
+  junction.alt = 'Wall Junction';
+
+  let mainElement = document.getElementById('main');
+  mainElement.appendChild(junction);
+
+  GameContents.junctions.push(this);
+}
+
+function loadJunctions() {
+  for (let i = 0; i < 15; i++) {
+    for (let j = 0; j < 15; j++) {
+      new Junction(i, j);
     }
   }
 }
