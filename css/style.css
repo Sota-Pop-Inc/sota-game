@@ -17,6 +17,15 @@ body, html {
   overflow: hidden;
 }
 
+body {
+background-image: url('/assets/background/BackgroundSeamless.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: repeat;
+  margin: 0; 
+  height: 100%; 
+}
+
 header {
   justify-content: space-evenly;
   position: fixed;
@@ -28,8 +37,8 @@ header {
   margin-bottom: 20px;
   background-image: url('../assets/background/HeaderBackgroundV2.png');
   background-size: cover; 
-  background-position: center;
   background-repeat: no-repeat; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header ul {
@@ -47,9 +56,13 @@ header li {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
-  font-family: 'Times New Roman', Times, serif;
   font-size: larger;
-  padding: 20px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  cursor:pointer;
 }
 
 a:visited { 
@@ -75,6 +88,7 @@ a:visited {
 }
 
 #main {
+  margin-top: 100px;
   position: relative;
   width: 648px; 
   height: 648px; 
