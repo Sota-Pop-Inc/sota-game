@@ -56,5 +56,6 @@ function loadLevel() {
   loadChar();
   loadDoor();
   loadKey();
-  generateMazeDFS();
+  loadWalls();
+  loadJunctions();
 }
