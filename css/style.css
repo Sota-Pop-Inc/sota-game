@@ -57,17 +57,27 @@ header li {
   letter-spacing: 1px;
   color: white;
   font-size: larger;
-  padding: 10px;
+  padding: 20px;
 }
 
-a {
+nav a {
+  display: inline-block;
+  transition: transform 0.3s ease, text-shadow 0.3s ease; 
   text-decoration: none;
   cursor:pointer;
+  color: #FFFFFF; 
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3); 
 }
 
-a:visited { 
+nav a:hover {
+  transform: scale(1.1); 
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+nav a:visited { 
   color: white;
 }
+
 .wall {
   position: absolute;
 }
