@@ -36,7 +36,7 @@ function loadKey () {
   let key = document.createElement('img');
 
   key.id = 'key';
-  key.src = 'assets/props/key.png';
+  key.src = 'assets/props/key32x32.png';
   key.alt = 'Key';
 
   let mainElement = document.getElementById('main');
