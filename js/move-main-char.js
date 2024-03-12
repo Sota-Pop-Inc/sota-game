@@ -17,7 +17,7 @@ function moveChar(XorY, signFirst, signSecond) {
 
 document.addEventListener('keydown', function(event) {
   console.log('Movement triggered');
-  switch(event.key) {
+  switch (event.key) {
   case 'ArrowLeft':
     moveChar('x', -1, 1);
     break;
@@ -33,3 +33,4 @@ document.addEventListener('keydown', function(event) {
   console.log('Character coordinates updated : ' + GameContents.mainChar.coordinates.x + ',' + GameContents.mainChar.coordinates.y);
   renderPage();
 });
+

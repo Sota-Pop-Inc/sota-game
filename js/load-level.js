@@ -10,10 +10,11 @@ function loadChar () {
   let mainElement = document.getElementById('main');
   mainElement.appendChild(char);
 
-  GameContents.mainChar.coordinates.x = 8;
-  GameContents.mainChar.coordinates.y = 8;
-  GameContents.mainChar.bottomRight.x = GameContents.mainChar.width;
-  GameContents.mainChar.bottomRight.y = GameContents.mainChar.height;
+  let chosenCell = GameContents.grid[Math.floor(Math.random() * 16)][Math.floor(Math.random() * 16)];
+  GameContents.mainChar.coordinates.x = chosenCell.x;
+  GameContents.mainChar.coordinates.y = chosenCell.y;
+  GameContents.mainChar.bottomRight.x = chosenCell.x + GameContents.mainChar.width - 1;
+  GameContents.mainChar.bottomRight.y = chosenCell.y + GameContents.mainChar.height - 1;
 }
 
 function loadDoor () {
@@ -26,10 +27,11 @@ function loadDoor () {
   let mainElement = document.getElementById('main');
   mainElement.appendChild(door);
 
-  GameContents.door.coordinates.x = 300;
-  GameContents.door.coordinates.y = 300;
-  GameContents.door.bottomRight.x = GameContents.door.coordinates.x + GameContents.door.width;
-  GameContents.door.bottomRight.y = GameContents.door.bottomRight.y + GameContents.door.height;
+  let chosenCell = GameContents.grid[Math.floor(Math.random() * 16)][Math.floor(Math.random() * 16)];
+  GameContents.door.coordinates.x = chosenCell.x;
+  GameContents.door.coordinates.y = chosenCell.y;
+  GameContents.door.bottomRight.x = chosenCell.x + GameContents.door.width - 1;
+  GameContents.door.bottomRight.y = chosenCell.y + GameContents.door.height - 1;
 }
 
 function loadKey () {
@@ -42,19 +44,17 @@ function loadKey () {
   let mainElement = document.getElementById('main');
   mainElement.appendChild(key);
 
-  GameContents.key.coordinates.x = 200;
-  GameContents.key.coordinates.y = 500;
-  GameContents.key.bottomRight.x = GameContents.key.coordinates.x + GameContents.key.width;
-  GameContents.key.bottomRight.y = GameContents.key.bottomRight.y + GameContents.key.height;
+  let chosenCell = GameContents.grid[Math.floor(Math.random() * 16)][Math.floor(Math.random() * 16)];
+  GameContents.key.coordinates.x = chosenCell.x;
+  GameContents.key.coordinates.y = chosenCell.y;
+  GameContents.key.bottomRight.x = chosenCell.x + GameContents.key.width - 1;
+  GameContents.key.bottomRight.y = chosenCell.y + GameContents.key.height - 1;
 }
 
 function loadLevel() {
+  loadCells();
   loadChar();
   loadDoor();
   loadKey();
-  let seed = '';
-  for (let i = 0; i < 480; i++) {
-    seed += Math.floor(2 * Math.random());
-  }
-  generateWalls(seed);
+  generateMazeDFS();
 }
