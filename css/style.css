@@ -27,26 +27,34 @@ background-image: url('/assets/background/BackgroundSeamless.png');
 }
 
 header {
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1001;
   height: 75px;
-  margin-bottom: 20px;
+  
   background-image: url('../assets/background/HeaderBackgroundV2.png');
   background-size: cover; 
   background-repeat: no-repeat; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+header img.logo {
+  max-height: 100%;
+  margin-top: 20px;
+  margin-right: 20px;
+}
 
 header ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
   align-items: center;
   list-style-type: none;
   padding: 0;
+  margin: 20px; 
 }
 
 header li {
@@ -58,6 +66,10 @@ header li {
   color: white;
   font-size: larger;
   padding: 20px;
+}
+nav {
+  display: flex;
+  align-items: center;
 }
 
 nav a {
