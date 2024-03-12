@@ -16,6 +16,7 @@ header {
   width: 100%;
   z-index: 1001;
   height: 100px;
+  margin-bottom: 20px;
   background-color: darkolivegreen; 
 }
 
