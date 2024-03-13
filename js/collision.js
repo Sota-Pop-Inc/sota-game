@@ -15,7 +15,7 @@ function checkSpecCollision(object) {
 }
 
 function collectKey() {
-  if (checkSpecCollision(GameContents.key)) {
+  if (checkSpecCollision(GameContents.key) && (GameContents.mainChar.inventory.includes('key') === false)) {
     GameContents.mainChar.inventory.push('key');
     console.log('we got da key yippee');
   }
@@ -24,6 +24,7 @@ function collectKey() {
 function useDoor() {
   if (checkSpecCollision(GameContents.door) && GameContents.mainChar.inventory.includes('key')) {
     console.log('yay u win :3');
+    stopTimer();
     resetPage();
     loadLevel();
     renderPage();

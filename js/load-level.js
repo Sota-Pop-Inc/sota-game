@@ -4,7 +4,7 @@ function loadChar () {
   let char = document.createElement('img');
 
   char.id = 'mainChar';
-  char.src = 'assets/character/Hero32x32.png';
+  char.src = 'assets/character/BubblesRight.png';
   char.alt = 'Main Character';
 
   let mainElement = document.getElementById('main');
@@ -58,6 +58,7 @@ function initializeLevel() {
   loadKey();
   loadWalls();
   loadJunctions();
+  startTimer();
 }
 
 function loadLevel() {
@@ -65,4 +66,5 @@ function loadLevel() {
   loadDoor();
   loadKey();
   loadWalls();
+  startTimer();
 }
