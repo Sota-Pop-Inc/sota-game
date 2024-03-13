@@ -7,6 +7,7 @@ let GameContents = {
     width: 32,
     height: 32,
     bottomRight: {},
+    health: 3,
     inventory: {
       key: false,
       pickaxe: {}
@@ -30,6 +31,14 @@ let GameContents = {
     width: 32,
     height: 32,
     bottomRight: {}
+  },
+  slime: {
+    dead: false,
+    coordinates: {},
+    width: 32,
+    height: 32,
+    bottomRight: {},
+    health: 5
   },
   walls: [],
   junctions: []

@@ -3,17 +3,20 @@
 function renderPage() {
   const mainCharHTML = document.getElementById('mainChar');
   const doorHTML = document.getElementById('door');
+  const slimeHTML = document.getElementById('slime');
 
   mainCharHTML.style.left = GameContents.mainChar.coordinates.x + 'px';
   mainCharHTML.style.top = GameContents.mainChar.coordinates.y + 'px';
   doorHTML.style.left = GameContents.door.coordinates.x + 'px';
   doorHTML.style.top = GameContents.door.coordinates.y + 'px';
+  slimeHTML.style.left = GameContents.slime.coordinates.x + 'px';
+  slimeHTML.style.top = GameContents.slime.coordinates.y + 'px';
 
   if (GameContents.mainChar.inventory.key === false) {
     const keyHTML = document.getElementById('key');
 
     keyHTML.style.left = GameContents.key.coordinates.x + 'px';
-    keyHTML.style.top = GameContents.key.coordinates.y + 'px';  
+    keyHTML.style.top = GameContents.key.coordinates.y + 'px';
   }
 
   if (GameContents.chest.collected === false) {
@@ -47,11 +50,14 @@ function resetPage() {
   mainCharHTML.remove();
   doorHTML.remove();
 
-  console.log('chest about to be removed');
   if (GameContents.chest.collected === false) {
-    console.log('chest should be removed');
     const chestHTML = document.getElementById('chest');
     chestHTML.remove();
+  }
+
+  if (GameContents.slime.dead === false) {
+    const slimeHTML = document.getElementById('slime');
+    slimeHTML.remove();
   }
 
   for (let i = 0; i < GameContents.walls.length; i++) {
@@ -63,6 +69,5 @@ function resetPage() {
   GameContents.walls = [];
   GameContents.mainChar.inventory.key = false;
   GameContents.chest.collected = false;
-
-  console.log('reset');
+  GameContents.slime.dead = false;
 }
