@@ -9,7 +9,7 @@ function renderPage() {
   doorHTML.style.left = GameContents.door.coordinates.x + 'px';
   doorHTML.style.top = GameContents.door.coordinates.y + 'px';
 
-  if (GameContents.mainChar.inventory.includes('key') === false) {
+  if (GameContents.mainChar.inventory.key === false) {
     const keyHTML = document.getElementById('key');
 
     keyHTML.style.left = GameContents.key.coordinates.x + 'px';
