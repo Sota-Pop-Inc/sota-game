@@ -31,9 +31,10 @@ function useDoor() {
 }
 
 function collectPowerup() {
-  if (checkSpecCollision(GameContents.powerup)) {
-    let powerups = ['pickaxe'];
+  if (checkSpecCollision(GameContents.chest)) {
     let chosenIndex = Math.floor(Math.random() * powerups.length);
     GameContents.mainChar.inventory[powerups[chosenIndex]].pickedUp();
+    const powerUpAudio = document.getElementById('power-up');
+    powerUpAudio.play();
   }
 }
