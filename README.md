@@ -19,3 +19,8 @@ Early GameBoy: © 2024 Jimmy Campbell
 <https://www.dafont.com/profile.php?user=757106>  
   
 ### Music:  
+
+### Design Assets:
+
+Bubbles Character:  © 2024 CRAFTPIX.NET
+<https://craftpix.net/file-licenses/>
