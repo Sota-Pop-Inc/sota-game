@@ -16,8 +16,10 @@ function moveChar(XorY, signFirst, signSecond) {
       }
       GameContents.mainChar.coordinates[XorY] += speed * signSecond;
       GameContents.mainChar.bottomRight[XorY] += speed * signSecond;
+      return;
     }
   }
+  collectPowerup();
   collectKey();
   useDoor();
   renderPage();

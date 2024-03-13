@@ -31,9 +31,13 @@ function useDoor() {
 }
 
 function collectPowerup() {
-  if (checkSpecCollision(GameContents.powerup)) {
+  if (checkSpecCollision(GameContents.chest) && GameContents.chest.collected === false) {
     let powerups = ['pickaxe'];
-    let chosenIndex = Math.floor(Math.random() * powerups.length);
-    GameContents.mainChar.inventory[powerups[chosenIndex]].pickedUp();
+    GameContents.mainChar.inventory['pickaxe'].pickedUp();
+    const powerUpAudio = document.getElementById('power-up');
+    powerUpAudio.play();
+    const chestHTML = document.getElementById('chest');
+    chestHTML.remove();
+    GameContents.chest.collected = true;
   }
 }

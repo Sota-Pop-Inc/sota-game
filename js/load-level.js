@@ -51,13 +51,32 @@ function loadKey () {
   GameContents.key.bottomRight.y = chosenCell.y + GameContents.key.height - 1;
 }
 
+function loadChest () {
+  let chest = document.createElement('img');
+
+  chest.id = 'chest';
+  chest.src = 'assets/props/chest.png';
+  chest.alt = 'Chest';
+
+  let mainElement = document.getElementById('main');
+  mainElement.appendChild(chest);
+
+  let chosenCell = GameContents.grid[Math.floor(Math.random() * 16)][Math.floor(Math.random() * 16)];
+  GameContents.chest.coordinates.x = chosenCell.x;
+  GameContents.chest.coordinates.y = chosenCell.y;
+  GameContents.chest.bottomRight.x = chosenCell.x + GameContents.chest.width - 1;
+  GameContents.chest.bottomRight.y = chosenCell.y + GameContents.chest.height - 1;
+}
+
 function initializeLevel() {
   loadCells();
   loadChar();
   loadDoor();
   loadKey();
+  loadChest();
   loadWalls();
   loadJunctions();
+  loadPowerUps();
   startTimer();
 }
 
@@ -65,6 +84,7 @@ function loadLevel() {
   loadChar();
   loadDoor();
   loadKey();
+  loadChest();
   loadWalls();
   startTimer();
 }

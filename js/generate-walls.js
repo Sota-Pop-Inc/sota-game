@@ -24,6 +24,11 @@ function Wall(orientation, column, row) {
     };
     this.width = 8;
     this.height = 32;
+    if (column === 0 || column === 16) {
+      this.border = true;
+    } else {
+      this.border = false;
+    }
   } else if (orientation === 'hori') {
     this.coordinates = {
       x: 40 * column + 8,
@@ -31,6 +36,11 @@ function Wall(orientation, column, row) {
     };
     this.width = 32;
     this.height = 8;
+    if (row === 0 || row === 16) {
+      this.border = true;
+    } else {
+      this.border = false;
+    }
   }
 
   this.bottomRight = {
