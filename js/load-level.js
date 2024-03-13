@@ -68,12 +68,30 @@ function loadChest () {
   GameContents.chest.bottomRight.y = chosenCell.y + GameContents.chest.height - 1;
 }
 
+function loadSlime () {
+  let slime = document.createElement('img');
+
+  slime.id = 'slime';
+  slime.src = 'assets/props/Slime.png';
+  slime.alt = 'Slime';
+
+  let mainElement = document.getElementById('main');
+  mainElement.appendChild(slime);
+
+  let chosenCell = GameContents.grid[Math.floor(Math.random() * 16)][Math.floor(Math.random() * 16)];
+  GameContents.slime.coordinates.x = chosenCell.x;
+  GameContents.slime.coordinates.y = chosenCell.y;
+  GameContents.slime.bottomRight.x = chosenCell.x + GameContents.slime.width - 1;
+  GameContents.slime.bottomRight.y = chosenCell.y + GameContents.slime.height - 1;
+}
+
 function initializeLevel() {
   loadCells();
   loadChar();
   loadDoor();
   loadKey();
   loadChest();
+  loadSlime();
   loadWalls();
   loadJunctions();
   loadPowerUps();
@@ -85,6 +103,7 @@ function loadLevel() {
   loadDoor();
   loadKey();
   loadChest();
+  loadSlime();
   loadWalls();
   startTimer();
 }

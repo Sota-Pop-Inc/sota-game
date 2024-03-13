@@ -109,12 +109,22 @@ nav a:visited {
 
 #door {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
 }
 
 #key {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
+}
+
+#chest {
+  position: absolute;
+  z-index: 3;
+}
+
+#slime {
+  position: absolute;
+  z-index: 5;
 }
 
 #information {
@@ -147,6 +157,7 @@ nav a:visited {
 }
 
 #main {
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,6 +213,10 @@ main::after {
   left: 0px;
 }
 
-#chest {
+#level-message {
   position: absolute;
+  font-family: 'Early GameBoy';
+  color: white;
+  size: medium;
+  z-index: 51;
 }
