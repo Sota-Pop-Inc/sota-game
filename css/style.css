@@ -22,6 +22,7 @@ body, html {
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url('/assets/background/BackgroundSeamless.png');
@@ -108,19 +109,63 @@ nav a:visited {
 
 #door {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
 }
 
 #key {
   position: absolute;
-  z-index: 2;
+  z-index: 4;
+}
+
+#chest {
+  position: absolute;
+  z-index: 3;
+}
+
+#slime {
+  position: absolute;
+  z-index: 5;
+}
+
+#information {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#information, #HUD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  max-width: 648px;
+  height: 800px;
+  margin: 0px;
+  box-sizing: border-box;
+  background-image: url(../assets/background/HeaderBackgroundV2.png);
+  background-size:cover;
+  height: fit-content;
+
+}
+
+#information div, #HUD div {
+  margin: 0 10px; 
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
 }
 
 #main {
-  width: 648px; 
-  height: 648px; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 648px;
+  height: 648px;
   position: relative;
   z-index: 1;
+  margin: 0;
 }
 
 #background-image {
@@ -145,21 +190,6 @@ main::after {
   pointer-events: none; 
 }
 
-#sidePanel {
-  position: fixed; /* Use fixed positioning to place it independently */
-  top: 0; /* Align to the top */
-  right: 0; /* Float to the right */
-  width: 200px; /* Adjust based on your preference */
-  height: 100%; /* Full viewport height */
-  background-image: url('../assets/background/MENU\ TABLE.png'); 
-  background-size: contain; /* Ensure the full image is visible and covers the panel */
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-
-}
 
 #sidePanel h1 {
   font-family: 'Alkhemikal', sans-serif; 
@@ -171,4 +201,22 @@ main::after {
   font-family: 'Alkhemikal', sans-serif; 
   color: black;
   font-size: smaller;
+}
+
+#floor-interim {
+  background-color: black;
+  width: 648px;
+  height: 648px;
+  z-index: 50;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#level-message {
+  position: absolute;
+  font-family: 'Early GameBoy';
+  color: white;
+  size: medium;
+  z-index: 51;
 }

@@ -7,7 +7,11 @@ let GameContents = {
     width: 32,
     height: 32,
     bottomRight: {},
-    inventory: []
+    health: 3,
+    inventory: {
+      key: false,
+      pickaxe: {}
+    }
   },
   door: {
     coordinates: {},
@@ -21,10 +25,24 @@ let GameContents = {
     height: 32,
     bottomRight: {}
   },
+  chest: {
+    collected: false,
+    coordinates: {},
+    width: 32,
+    height: 32,
+    bottomRight: {}
+  },
+  slime: {
+    dead: false,
+    coordinates: {},
+    width: 32,
+    height: 32,
+    bottomRight: {},
+    health: 5
+  },
   walls: [],
   junctions: []
 };
 
-console.log('wowee imma boutta load the level');
-loadLevel();
+initializeLevel();
 renderPage();

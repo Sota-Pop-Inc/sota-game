@@ -15,14 +15,29 @@ function checkSpecCollision(object) {
 }
 
 function collectKey() {
-  if (checkSpecCollision(GameContents.key)) {
-    GameContents.mainChar.inventory.push('key');
+  if (checkSpecCollision(GameContents.key) && (GameContents.mainChar.inventory.key === false)) {
+    GameContents.mainChar.inventory.key = true;
     console.log('we got da key yippee');
+    const keyHTML = document.getElementById('key');
+    keyHTML.remove();
   }
 }
 
 function useDoor() {
-  if (checkSpecCollision(GameContents.door) && GameContents.mainChar.inventory.includes('key')) {
+  if (checkSpecCollision(GameContents.door) && GameContents.mainChar.inventory.key) {
     console.log('yay u win :3');
+    newFloor();
+  }
+}
+
+function collectPowerup() {
+  if (checkSpecCollision(GameContents.chest) && GameContents.chest.collected === false) {
+    let powerups = ['pickaxe'];
+    GameContents.mainChar.inventory['pickaxe'].pickedUp();
+    const powerUpAudio = document.getElementById('power-up');
+    powerUpAudio.play();
+    const chestHTML = document.getElementById('chest');
+    chestHTML.remove();
+    GameContents.chest.collected = true;
   }
 }

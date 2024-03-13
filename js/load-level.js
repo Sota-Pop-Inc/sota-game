@@ -4,7 +4,7 @@ function loadChar () {
   let char = document.createElement('img');
 
   char.id = 'mainChar';
-  char.src = 'assets/character/Hero32x32.png';
+  char.src = 'assets/character/BubblesRight.png';
   char.alt = 'Main Character';
 
   let mainElement = document.getElementById('main');
@@ -51,11 +51,59 @@ function loadKey () {
   GameContents.key.bottomRight.y = chosenCell.y + GameContents.key.height - 1;
 }
 
-function loadLevel() {
+function loadChest () {
+  let chest = document.createElement('img');
+
+  chest.id = 'chest';
+  chest.src = 'assets/props/chest.png';
+  chest.alt = 'Chest';
+
+  let mainElement = document.getElementById('main');
+  mainElement.appendChild(chest);
+
+  let chosenCell = GameContents.grid[Math.floor(Math.random() * 16)][Math.floor(Math.random() * 16)];
+  GameContents.chest.coordinates.x = chosenCell.x;
+  GameContents.chest.coordinates.y = chosenCell.y;
+  GameContents.chest.bottomRight.x = chosenCell.x + GameContents.chest.width - 1;
+  GameContents.chest.bottomRight.y = chosenCell.y + GameContents.chest.height - 1;
+}
+
+function loadSlime () {
+  let slime = document.createElement('img');
+
+  slime.id = 'slime';
+  slime.src = 'assets/props/Slime.png';
+  slime.alt = 'Slime';
+
+  let mainElement = document.getElementById('main');
+  mainElement.appendChild(slime);
+
+  let chosenCell = GameContents.grid[Math.floor(Math.random() * 16)][Math.floor(Math.random() * 16)];
+  GameContents.slime.coordinates.x = chosenCell.x;
+  GameContents.slime.coordinates.y = chosenCell.y;
+  GameContents.slime.bottomRight.x = chosenCell.x + GameContents.slime.width - 1;
+  GameContents.slime.bottomRight.y = chosenCell.y + GameContents.slime.height - 1;
+}
+
+function initializeLevel() {
   loadCells();
   loadChar();
   loadDoor();
   loadKey();
+  loadChest();
+  loadSlime();
   loadWalls();
   loadJunctions();
+  loadPowerUps();
+  startTimer();
+}
+
+function loadLevel() {
+  loadChar();
+  loadDoor();
+  loadKey();
+  loadChest();
+  loadSlime();
+  loadWalls();
+  startTimer();
 }
