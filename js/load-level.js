@@ -51,11 +51,18 @@ function loadKey () {
   GameContents.key.bottomRight.y = chosenCell.y + GameContents.key.height - 1;
 }
 
-function loadLevel() {
+function initializeLevel() {
   loadCells();
   loadChar();
   loadDoor();
   loadKey();
   loadWalls();
   loadJunctions();
+}
+
+function loadLevel() {
+  loadChar();
+  loadDoor();
+  loadKey();
+  loadWalls();
 }

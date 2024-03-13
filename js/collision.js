@@ -24,5 +24,8 @@ function collectKey() {
 function useDoor() {
   if (checkSpecCollision(GameContents.door) && GameContents.mainChar.inventory.includes('key')) {
     console.log('yay u win :3');
+    resetPage();
+    loadLevel();
+    renderPage();
   }
 }
