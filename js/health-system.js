@@ -14,5 +14,3 @@ function checkAndDecrease(object) {
     decreaseHealth();
   }
 }
-
-

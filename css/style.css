@@ -23,6 +23,7 @@ body, html {
 body {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   background-image: url('/assets/background/BackgroundSeamless.png');
   background-size: cover; 
@@ -153,6 +154,7 @@ nav a:visited {
 
 main::after {
   z-index: 1;
+  text-align: center;
   content: '';
   position: absolute;
   top: 0;
@@ -186,6 +188,13 @@ main::after {
   position: absolute;
   top: 0px;
   left: 0px;
+}
+
+#level-message {
+  font-family: 'Early GameBoy';
+  color: white;
+  size: medium;
+  z-index: 51;
 }
 
 #chest {
