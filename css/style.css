@@ -116,11 +116,31 @@ nav a:visited {
   z-index: 2;
 }
 
+#information, #HUD {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  margin: 20px 0; 
+}
+
+#information div, #HUD div {
+  margin: 0 10px; 
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+}
+
 #main {
-  width: 648px; 
-  height: 648px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 648px;
+  height: 648px;
   position: relative;
   z-index: 1;
+  margin: 20px 0;
 }
 
 #background-image {
@@ -145,21 +165,6 @@ main::after {
   pointer-events: none; 
 }
 
-#sidePanel {
-  position: fixed; /* Use fixed positioning to place it independently */
-  top: 0; /* Align to the top */
-  right: 0; /* Float to the right */
-  width: 200px; /* Adjust based on your preference */
-  height: 100%; /* Full viewport height */
-  background-image: url('../assets/background/MENU\ TABLE.png'); 
-  background-size: contain; /* Ensure the full image is visible and covers the panel */
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-
-}
 
 #sidePanel h1 {
   font-family: 'Alkhemikal', sans-serif; 
