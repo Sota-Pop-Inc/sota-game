@@ -26,5 +26,5 @@ let GameContents = {
 };
 
 console.log('wowee imma boutta load the level');
-loadLevel();
+initializeLevel();
 renderPage();

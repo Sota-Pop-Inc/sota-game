@@ -14,15 +14,36 @@ function renderPage() {
 
   for (let i = 0; i < GameContents.walls.length; i++) {
     const newWallHTML = document.getElementById('wall-' + i);
+
     newWallHTML.style.left = GameContents.walls[i].coordinates.x + 'px';
     newWallHTML.style.top = GameContents.walls[i].coordinates.y + 'px';
   }
 
   for (let i = 0; i < GameContents.junctions.length; i++) {
     const newJunctionHTML = document.getElementById('junction-' + i);
+
     newJunctionHTML.style.left = GameContents.junctions[i].coordinates.x + 'px';
     newJunctionHTML.style.top = GameContents.junctions[i].coordinates.y + 'px';
   }
 
   console.log('rendered');
+}
+
+function resetPage() {
+  const mainCharHTML = document.getElementById('mainChar');
+  const doorHTML = document.getElementById('door');
+  const keyHTML = document.getElementById('key');
+
+  mainCharHTML.remove();
+  doorHTML.remove();
+  keyHTML.remove();
+
+  for (let i = 0; i < GameContents.walls.length; i++) {
+    const newWallHTML = document.getElementById('wall-' + i);
+
+    newWallHTML.remove();
+  }
+  GameContents.walls = [];
+
+  console.log('reset');
 }
