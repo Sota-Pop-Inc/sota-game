@@ -44,6 +44,7 @@ function resetPage() {
     newWallHTML.remove();
   }
   GameContents.walls = [];
+  GameContents.mainChar.inventory.shift();
 
   console.log('reset');
 }

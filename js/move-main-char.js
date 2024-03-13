@@ -1,6 +1,6 @@
 'use strict';
 
-let speed = 8;
+let speed = 2;
 let movementInterval = null;
 let keyPressed = {};
 
@@ -21,8 +21,15 @@ function moveChar(XorY, signFirst, signSecond) {
 function startMovement() {
   clearInterval(movementInterval);
   movementInterval = setInterval(function() {
-    if (keyPressed['ArrowLeft']) moveChar('x', -1, 1);
-    if (keyPressed['ArrowRight']) moveChar('x', 1, -1);
+    const mainCharHTML = document.getElementById('mainChar');
+    if (keyPressed['ArrowLeft']) {
+      moveChar('x', -1, 1);
+      mainCharHTML.src = 'assets/character/BubblesLeft.png';
+    }
+    if (keyPressed['ArrowRight']) {
+      moveChar('x', 1, -1);
+      mainCharHTML.src = 'assets/character/BubblesRight.png';
+    }
     if (keyPressed['ArrowUp']) moveChar('y', -1, 1);
     if (keyPressed['ArrowDown']) moveChar('y', 1, -1);
   }, 16);
