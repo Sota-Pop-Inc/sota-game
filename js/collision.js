@@ -15,8 +15,8 @@ function checkSpecCollision(object) {
 }
 
 function collectKey() {
-  if (checkSpecCollision(GameContents.key) && (GameContents.mainChar.inventory.includes('key') === false)) {
-    GameContents.mainChar.inventory.push('key');
+  if (checkSpecCollision(GameContents.key) && (GameContents.mainChar.inventory.key === false)) {
+    GameContents.mainChar.inventory.key = true;
     console.log('we got da key yippee');
     const keyHTML = document.getElementById('key');
     keyHTML.remove();
@@ -24,8 +24,16 @@ function collectKey() {
 }
 
 function useDoor() {
-  if (checkSpecCollision(GameContents.door) && GameContents.mainChar.inventory.includes('key')) {
+  if (checkSpecCollision(GameContents.door) && GameContents.mainChar.inventory.key) {
     console.log('yay u win :3');
     newFloor();
+  }
+}
+
+function collectPowerup() {
+  if (checkSpecCollision(GameContents.powerup)) {
+    let powerups = ['pickaxe'];
+    let chosenIndex = Math.floor(Math.random() * powerups.length);
+    GameContents.mainChar.inventory[powerups[chosenIndex]].pickedUp();
   }
 }

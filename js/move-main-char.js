@@ -3,12 +3,17 @@
 let speed = 2;
 let movementInterval = null;
 let keyPressed = {};
+let lastWallTouched;
 
 function moveChar(XorY, signFirst, signSecond) {
   GameContents.mainChar.coordinates[XorY] += speed * signFirst;
   GameContents.mainChar.bottomRight[XorY] += speed * signFirst;
   for (let i = 0; i < GameContents.walls.length; i++) {
     if (checkSpecCollision(GameContents.walls[i]) || (i < GameContents.junctions.length && checkSpecCollision(GameContents.junctions[i]))) {
+      if (checkSpecCollision(GameContents.walls[i])) {
+        console.log('rejected AGAIN');
+        lastWallTouched = i;
+      }
       GameContents.mainChar.coordinates[XorY] += speed * signSecond;
       GameContents.mainChar.bottomRight[XorY] += speed * signSecond;
     }
