@@ -13,7 +13,14 @@ function renderPage() {
     const keyHTML = document.getElementById('key');
 
     keyHTML.style.left = GameContents.key.coordinates.x + 'px';
-    keyHTML.style.top = GameContents.key.coordinates.y + 'px';
+    keyHTML.style.top = GameContents.key.coordinates.y + 'px';  
+  }
+
+  if (GameContents.chest.collected === false) {
+    const chestHTML = document.getElementById('chest');
+
+    chestHTML.style.left = GameContents.chest.coordinates.x + 'px';
+    chestHTML.style.top = GameContents.chest.coordinates.y + 'px';
   }
 
   for (let i = 0; i < GameContents.walls.length; i++) {
@@ -40,13 +47,22 @@ function resetPage() {
   mainCharHTML.remove();
   doorHTML.remove();
 
+  console.log('chest about to be removed');
+  if (GameContents.chest.collected === false) {
+    console.log('chest should be removed');
+    const chestHTML = document.getElementById('chest');
+    chestHTML.remove();
+  }
+
   for (let i = 0; i < GameContents.walls.length; i++) {
     const newWallHTML = document.getElementById('wall-' + i);
 
     newWallHTML.remove();
   }
+
   GameContents.walls = [];
-  GameContents.mainChar.inventory.splice(GameContents.mainChar.inventory.indexOf('key'), 1);
+  GameContents.mainChar.inventory.key = false;
+  GameContents.chest.collected = false;
 
   console.log('reset');
 }

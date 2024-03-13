@@ -1,25 +1,29 @@
 'use strict';
 
-let powerups = ['pickaxe'];
-
 function loadPowerUps() {
-  let inv = GameContents.mainChar.inventory;
-
   function loadPickaxe() {
-    inv.pickedUp = function() {
+    console.log('its LOADED');
+    GameContents.mainChar.inventory.pickaxe.pickedUp = function() {
       console.log('picked up Pick');
       this.present = true;
       this.uses += 5;
       console.log(this.uses);
       console.log(this.present);
     };
-    inv.present = false;
-    inv.uses = 0;
-    inv.breakWall = function() {
-      if (inv.pickaxe.present) {
+
+    GameContents.mainChar.inventory.pickaxe.present = false;
+    GameContents.mainChar.inventory.pickaxe.uses = 0;
+    GameContents.mainChar.inventory.pickaxe.breakWall = function() {
+      if (GameContents.mainChar.inventory.pickaxe.present && GameContents.walls[lastWallTouched].border === false) {
         const wallHTML = document.getElementById('wall-' + lastWallTouched);
+
         wallHTML.style.display = 'none';
-        inv.pickaxe.uses--;
+
+        GameContents.mainChar.inventory.pickaxe.uses--;
+        if (GameContents.mainChar.inventory.pickaxe.uses === 0) {
+          GameContents.mainChar.inventory.pickaxe.present = false;
+        }
+
         GameContents.walls[lastWallTouched].coordinates.x = 0;
         GameContents.walls[lastWallTouched].coordinates.y = 0;
         GameContents.walls[lastWallTouched].bottomRight.x = 0;
@@ -29,9 +33,8 @@ function loadPowerUps() {
   }
 
   document.addEventListener('keydown', function(event) {
-    let inv = GameContents.mainChar.inventory;
     if (event.key === 'z') {
-      inv.pickaxe.breakWall();
+      GameContents.mainChar.inventory.pickaxe.breakWall();
     }
   });
 

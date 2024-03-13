@@ -25,6 +25,7 @@ let GameContents = {
     bottomRight: {}
   },
   chest: {
+    collected: false,
     coordinates: {},
     width: 32,
     height: 32,
