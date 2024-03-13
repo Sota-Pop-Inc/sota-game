@@ -41,6 +41,10 @@ function stopMovement() {
 
 document.addEventListener('keydown', function(event) {
   console.log('Movement triggered');
+  if (keyPressed['ArrowUp'] || keyPressed['ArrowRight'] || keyPressed['ArrowDown'] || keyPressed['ArrowLeft']) {
+    const stepsAudio = document.getElementById('steps');
+    stepsAudio.play();
+  }
   if (!keyPressed[event.key]) {
     keyPressed[event.key] = true;
     startMovement();
@@ -48,8 +52,12 @@ document.addEventListener('keydown', function(event) {
 });
 
 document.addEventListener('keyup', function(event) {
-  console.log('Movement stopped');
   keyPressed[event.key] = false;
+  console.log('Movement stopped');
+  if (!keyPressed['ArrowUp'] && !keyPressed['ArrowRight'] && !keyPressed['ArrowDown'] && !keyPressed['ArrowLeft']) {
+    const stepsAudio = document.getElementById('steps');
+    stepsAudio.pause();
+  }
   if (!Object.values(keyPressed).includes(true)) {
     stopMovement();
   }

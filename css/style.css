@@ -172,3 +172,13 @@ main::after {
   color: black;
   font-size: smaller;
 }
+
+#floor-interim {
+  background-color: black;
+  width: 648px;
+  height: 648px;
+  z-index: 50;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
