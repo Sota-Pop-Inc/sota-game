@@ -125,11 +125,10 @@ nav a:visited {
 }
 #information, #HUD {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%; 
   max-width: 648px;
-  height: 800px;
   margin: 0px;
   box-sizing: border-box;
   background-image: url(../assets/background/HeaderBackgroundV2.png);
@@ -137,14 +136,20 @@ nav a:visited {
   height: fit-content;
 
 }
-
-#information div, #HUD div {
-  margin: 0 10px; 
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  text-align: center;
+body #information, body #HUD {
+  height: 80px; /* Adjusted height */
+  /* Other properties */
 }
+#information div, #HUD div {
+    margin: 0 10px; /* Spacing between each div */
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    /* Ensure divs inside the containers also don't grow too large */
+    max-width: 200px; /* Optional: Constrain child div width if necessary */
+    box-sizing: border-box; /* Include padding and border in the div's total width */
+  }
 
 #main {
   display: flex;
