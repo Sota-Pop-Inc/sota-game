@@ -9,16 +9,23 @@
       <nav>
         <ul>
           <li><a href="index.html">Game</a></li>
-          <li><a href="instructions.html">Instructions</a></li>
+          <img src="./assets/background/SotALogo.png" alt="logo" height="100px" width="175px">
+          <li><a href="About.html">About</a></li>
         </ul>
       </nav>
     </header>
-    <main id="main">
-      <img id="background-image" src="./assets/background/Background648x648.png" alt="Background648x648">
-    </main>
+      <main id="main">
+        <img id="background-image" src="./assets/background/Background648x648.png" alt="Background648x648">
+      </main>
+      <section id="sidePanel">
+        <audio id="background-sound" src="./assets/sound/happytown.mp3" autoplay loop>
+        </audio>
+        <h1>MUSIC CONTROL</h1>
+        <button id="mute">Pause</button>
+      </section>
     <footer>
-
     </footer>
+    <script src="./js/sound.js"></script>
     <script src="./js/generate-walls.js"></script>
     <script src="./js/load-level.js"></script>
     <script src="./js/render-page.js"></script>

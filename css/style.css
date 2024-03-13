@@ -1,30 +1,63 @@
+@font-face {
+  font-family:'Alkhemikal';
+  src: url('../assets/fonts/Alkhemikal.ttf');
+}
+
+nav li {
+  font-family: 'Alkhemikal', sans-serif; 
+}
+
+@font-face {
+  font-family:'Early GameBoy';
+  src: url('../assets/fonts/Early\ GameBoy.ttf');
+}
+
+
 body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/background/BackgroundSeamless.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: repeat;
+}
+
 header {
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1001;
-  height: 100px;
-  background-color: darkolivegreen; 
+  height: 75px;
+  background-image: url('../assets/background/HeaderBackgroundV2.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+header img.logo {
+  max-height: 100%;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 header ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
   align-items: center;
   list-style-type: none;
   padding: 0;
+  margin: 20px;
 }
 
 header li {
@@ -34,19 +67,41 @@ header li {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: white;
-  font-family: 'Times New Roman', Times, serif;
   font-size: larger;
   padding: 20px;
 }
+nav {
+  display: flex;
+  align-items: center;
+}
 
-a:visited { 
+nav a {
+  display: inline-block;
+  transition: transform 0.3s ease, text-shadow 0.3s ease; 
+  text-decoration: none;
+  cursor:pointer;
+  color: #FFFFFF; 
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3); 
+}
+
+nav a:hover {
+  transform: scale(1.1); 
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+nav a:visited { 
   color: white;
 }
+
 .wall {
   position: absolute;
 }
+
+.junction {
+  position: absolute;
+}
   
-  #mainChar {
+#mainChar {
   position: absolute;
   z-index: 100;
 }
@@ -62,13 +117,10 @@ a:visited {
 }
 
 #main {
-  position: relative;
   width: 648px; 
   height: 648px; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 0;
+  position: relative;
+  z-index: 1;
 }
 
 #background-image {
@@ -91,4 +143,32 @@ main::after {
   background-repeat: no-repeat;
   background-size: cover; 
   pointer-events: none; 
+}
+
+#sidePanel {
+  position: fixed; /* Use fixed positioning to place it independently */
+  top: 0; /* Align to the top */
+  right: 0; /* Float to the right */
+  width: 200px; /* Adjust based on your preference */
+  height: 100%; /* Full viewport height */
+  background-image: url('../assets/background/MENU\ TABLE.png'); 
+  background-size: contain; /* Ensure the full image is visible and covers the panel */
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+
+}
+
+#sidePanel h1 {
+  font-family: 'Alkhemikal', sans-serif; 
+  color: #FFFFFF;
+  font-size: medium;
+}
+
+#sidePanel button {
+  font-family: 'Alkhemikal', sans-serif; 
+  color: black;
+  font-size: smaller;
 }

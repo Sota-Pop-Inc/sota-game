@@ -1,6 +1,7 @@
 'use strict';
 
 let GameContents = {
+  grid: [],
   mainChar: {
     coordinates: {},
     width: 32,
@@ -16,23 +17,12 @@ let GameContents = {
   },
   key: {
     coordinates: {},
-    width: 16,
-    height: 16,
-    bottomRight: {}
-  },
-  wallVert: {
-    coordinates: {},
-    width: 8,
+    width: 32,
     height: 32,
     bottomRight: {}
   },
-  wallHori: {
-    coordinates: {},
-    width: 32,
-    height: 8,
-    bottomRight: {}
-  },
-  walls: []
+  walls: [],
+  junctions: []
 };
 
 console.log('wowee imma boutta load the level');
