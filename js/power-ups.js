@@ -32,6 +32,10 @@ function loadPowerUps() {
           pickaxeHTML.remove();
         }
 
+        if (GameContents.mainChar.inventory.pickaxe.uses % 5 === 0) {
+          const pickaxeHTML = document.getElementById('pickaxe');
+          pickaxeHTML.remove();
+        }
         GameContents.walls[lastWallTouched].coordinates.x = 0;
         GameContents.walls[lastWallTouched].coordinates.y = 0;
         GameContents.walls[lastWallTouched].bottomRight.x = 0;
