@@ -364,8 +364,49 @@ main::after {
     font-size: 20px;
     margin: 0 80px 0 80px;
     text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
-  }
+}
+
+#creators p {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 0 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with half opacity */
+  padding: 10px; /* Optional padding for p tags */
+}
+
+#instructions p {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 0 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with half opacity */
+  padding: 10px; /* Optional padding for p tags */
+}
+
+#about p {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 0 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with half opacity */
+  padding: 10px; /* Optional padding for p tags */
+}
+
+#creators {
+  margin-top: 160px;
+}
+
+#information {
+  margin-top: 70px;
+}
 
 #creators a {
-  margin: 10px;
+  margin-top: 50px;
 }
