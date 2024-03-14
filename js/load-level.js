@@ -55,7 +55,7 @@ function loadChest () {
   let chest = document.createElement('img');
 
   chest.id = 'chest';
-  chest.src = 'assets/props/chest.png';
+  chest.src = 'assets/props/Chest.png';
   chest.alt = 'Chest';
 
   let mainElement = document.getElementById('main');
