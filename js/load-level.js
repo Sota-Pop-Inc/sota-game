@@ -83,6 +83,8 @@ function loadSlime () {
   GameContents.slime.coordinates.y = chosenCell.y;
   GameContents.slime.bottomRight.x = chosenCell.x + GameContents.slime.width - 1;
   GameContents.slime.bottomRight.y = chosenCell.y + GameContents.slime.height - 1;
+
+  slimeAI();
 }
 
 function initializeLevel() {
@@ -95,7 +97,7 @@ function initializeLevel() {
   loadWalls();
   loadJunctions();
   loadPowerUps();
-  startTimer();
+  timer(true);
 }
 
 function loadLevel() {
@@ -105,5 +107,5 @@ function loadLevel() {
   loadChest();
   loadSlime();
   loadWalls();
-  startTimer();
+  timer(true);
 }

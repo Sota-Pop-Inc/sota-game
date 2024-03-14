@@ -1,9 +1,10 @@
 'use strict';
 
-let levelNum = 2;
+let levelNum = 1;
+let score = 0;
 
 function newFloor() {
-  stopTimer();
+  timer(false);
   resetPage();
 
   const blackScreen = document.createElement('div');
@@ -13,8 +14,11 @@ function newFloor() {
   const levelMessage = document.createElement('p');
 
   levelMessage.id = 'level-message';
-  levelMessage.textContent = 'Level ' + levelNum;
+  levelMessage.textContent = 'Level ' + (levelNum + 1);
   levelNum++;
+
+  const scoreHTML = document.getElementById('score');
+  scoreHTML.textContent = 'Score: ' + score;
 
   const mainHTML = document.getElementById('main');
   mainHTML.appendChild(blackScreen);
