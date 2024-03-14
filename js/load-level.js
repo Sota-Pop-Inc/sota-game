@@ -98,6 +98,11 @@ function initializeLevel() {
   loadJunctions();
   loadPowerUps();
   timer(true);
+  loadHealth();
+  const scoreHTML = document.getElementById('score');
+  scoreHTML.textContent = 'Score: 0';
+  const timerHTML = document.getElementById('timer');
+  timerHTML.textContent = 'Time: 0';
 }
 
 function loadLevel() {

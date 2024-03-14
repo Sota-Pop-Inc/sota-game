@@ -104,7 +104,7 @@ nav a:visited {
   
 #mainChar {
   position: absolute;
-  z-index: 100;
+  z-index: 49;
 }
 
 #door {
@@ -216,7 +216,7 @@ main::after {
   font-size: smaller;
 }
 
-#floor-interim {
+#floor-interim, #end-screen {
   background-color: black;
   width: 648px;
   height: 648px;
@@ -226,7 +226,7 @@ main::after {
   left: 0px;
 }
 
-#level-message {
+#level-message, #end-message {
   position: absolute;
   font-family: 'Early GameBoy';
   color: white;
@@ -316,3 +316,23 @@ main::after {
   margin-bottom: 40px;
 }
 
+#creatorButton {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease; 
+  text-decoration: none;
+  cursor:pointer;
+  color: #FFFFFF; 
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  font-family: 'Alkhemikal', sans-serif;
+}
+
+#creatorButton:hover {
+  transform: scale(1.1); 
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+#creatorButton:visited {
+  color: white;
+}

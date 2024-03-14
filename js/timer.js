@@ -20,6 +20,6 @@ function timer(StartOrStopBoolean) {
     const elapsedTime = endTime - startTime;
     console.log(`Time taken: ${elapsedTime / 1000} seconds`);
     score += 100;
-    score += 1000 - (10 * elapsedTime / 1000);
+    score += Math.abs(1000 - (10 * Math.floor(elapsedTime / 1000)));
   }
 }
