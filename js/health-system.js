@@ -32,6 +32,10 @@ function decreaseHealth() {
       const mainHTML = document.getElementById('main');
       mainHTML.appendChild(blackScreen);
       mainHTML.appendChild(endMessage);
+
+      if (score > highscore) {
+        localStorage.setItem('highscore', String(score))
+      }
       GameContents = {};
     }
   }
