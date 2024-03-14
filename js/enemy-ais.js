@@ -37,7 +37,7 @@ function slimeAI() {
         break;
       }
     }
-    if (directions.indexOf(lastChoice) % 2 === 0) {
+    if (lastChoice === 'up' || lastChoice === 'down') {
       perpChoice1 = 'right';
       perpChoice2 = 'left';
     } else {
@@ -60,9 +60,8 @@ function moveEntity(entity, XorY, signFirst, signSecond) {
   }
   GameContents[entity].coordinates[XorY] += speed * signFirst;
   GameContents[entity].bottomRight[XorY] += speed * signFirst;
-  if (checkSpecCollision('mainChar', GameContents.slime)) {
-    decreaseHealth();
-  }
+  decreaseHealth();
   renderPage();
   return true;
 }
+

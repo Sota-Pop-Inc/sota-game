@@ -4,7 +4,13 @@ function loadPowerUps() {
   function loadPickaxe() {
     console.log('its LOADED');
     GameContents.mainChar.inventory.pickaxe.pickedUp = function() {
-      console.log('picked up Pick');
+      const itemsHTML = document.getElementById('items');
+      const newItem = document.createElement('img');
+      newItem.id = 'pickaxe';
+      newItem.src = './assets/props/Pickaxe.png';
+      newItem.alt = 'Pickaxe';
+      itemsHTML.appendChild(newItem);
+
       this.present = true;
       this.uses += 5;
       console.log(this.uses);
@@ -22,6 +28,8 @@ function loadPowerUps() {
         GameContents.mainChar.inventory.pickaxe.uses--;
         if (GameContents.mainChar.inventory.pickaxe.uses === 0) {
           GameContents.mainChar.inventory.pickaxe.present = false;
+          const pickaxeHTML = document.getElementById('pickaxe');
+          pickaxeHTML.remove();
         }
 
         GameContents.walls[lastWallTouched].coordinates.x = 0;
