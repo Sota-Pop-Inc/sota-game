@@ -147,20 +147,28 @@ nav a:visited {
 
 }
 body #information, body #HUD {
-  height: 80px; /* Adjusted height */
-  /* Other properties */
+  height: 80px;
 }
+
 #information div, #HUD div {
-    margin: 0 10px; /* Spacing between each div */
+    margin: 0 10px; 
     padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
-    /* Ensure divs inside the containers also don't grow too large */
-    max-width: 200px; /* Optional: Constrain child div width if necessary */
-    box-sizing: border-box; /* Include padding and border in the div's total width */
+    max-width: 200px; 
+    box-sizing: border-box; 
   }
 
+
+#timer, #level, #score {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 10px;
+  margin: 0 80px 20px 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+
+}
 #main {
   text-align: center;
   display: flex;
