@@ -4,7 +4,11 @@ function slimeAI() {
   let lastChoice = 'up';
   let perpChoice1 = 'right';
   let perpChoice2 = 'left';
-  setInterval(function() {
+  const currentLevel = levelNum;
+  const slimeRepeatID = setInterval(function() {
+    if (currentLevel < levelNum) {
+      clearInterval(slimeRepeatID);
+    }
     let directions = ['up', 'right', 'down', 'left', perpChoice1, perpChoice1, perpChoice1, perpChoice1, perpChoice2, perpChoice2, perpChoice2, perpChoice2, lastChoice, lastChoice, lastChoice, lastChoice, lastChoice, lastChoice, lastChoice, lastChoice];
     console.log(directions);
     let movementAttempting = true;

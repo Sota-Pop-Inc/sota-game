@@ -20,6 +20,13 @@ function collectKey() {
     console.log('we got da key yippee');
     const keyHTML = document.getElementById('key');
     keyHTML.remove();
+
+    const itemsHTML = document.getElementById('items');
+    const keyITEM = document.createElement('img');
+    keyITEM.id = 'keyITEM';
+    keyITEM.src = './assets/props/Key32x32.png';
+    keyITEM.alt = 'Key';
+    itemsHTML.appendChild(keyITEM);
   }
 }
 
