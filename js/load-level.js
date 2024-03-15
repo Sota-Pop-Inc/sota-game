@@ -55,7 +55,7 @@ function loadChest () {
   let chest = document.createElement('img');
 
   chest.id = 'chest';
-  chest.src = 'assets/props/chest.png';
+  chest.src = 'assets/props/Chest.png';
   chest.alt = 'Chest';
 
   let mainElement = document.getElementById('main');
@@ -83,6 +83,8 @@ function loadSlime () {
   GameContents.slime.coordinates.y = chosenCell.y;
   GameContents.slime.bottomRight.x = chosenCell.x + GameContents.slime.width - 1;
   GameContents.slime.bottomRight.y = chosenCell.y + GameContents.slime.height - 1;
+
+  slimeAI();
 }
 
 function initializeLevel() {
@@ -95,7 +97,12 @@ function initializeLevel() {
   loadWalls();
   loadJunctions();
   loadPowerUps();
-  startTimer();
+  timer(true);
+  loadHealth();
+  const scoreHTML = document.getElementById('score');
+  scoreHTML.textContent = 'Score: 0';
+  const timerHTML = document.getElementById('timer');
+  timerHTML.textContent = 'Time: 0';
 }
 
 function loadLevel() {
@@ -105,5 +112,5 @@ function loadLevel() {
   loadChest();
   loadSlime();
   loadWalls();
-  startTimer();
+  timer(true);
 }

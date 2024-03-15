@@ -17,7 +17,7 @@ body, html {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+ 
 }
 
 body {
@@ -25,7 +25,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('/assets/background/BackgroundSeamless.png');
+  background-image: url('../assets/background/BackgroundSeamless.png');
   background-size: cover; 
   background-position: center; 
   background-repeat: repeat;
@@ -104,7 +104,7 @@ nav a:visited {
   
 #mainChar {
   position: absolute;
-  z-index: 100;
+  z-index: 49;
 }
 
 #door {
@@ -135,11 +135,10 @@ nav a:visited {
 }
 #information, #HUD {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   width: 100%; 
   max-width: 648px;
-  height: 800px;
   margin: 0px;
   box-sizing: border-box;
   background-image: url(../assets/background/HeaderBackgroundV2.png);
@@ -147,15 +146,29 @@ nav a:visited {
   height: fit-content;
 
 }
-
-#information div, #HUD div {
-  margin: 0 10px; 
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  text-align: center;
+body #information, body #HUD {
+  height: 80px;
 }
 
+#information div, #HUD div {
+    margin: 0 10px; 
+    padding: 10px;
+    color: white;
+    text-align: center;
+    max-width: 200px; 
+    box-sizing: border-box; 
+  }
+
+
+#timer, #level, #score {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 10px;
+  margin: 0 80px 20px 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+
+}
 #main {
   text-align: center;
   display: flex;
@@ -203,7 +216,7 @@ main::after {
   font-size: smaller;
 }
 
-#floor-interim {
+#floor-interim, #end-screen {
   background-color: black;
   width: 648px;
   height: 648px;
@@ -213,10 +226,187 @@ main::after {
   left: 0px;
 }
 
-#level-message {
+#level-message, #end-message {
   position: absolute;
   font-family: 'Early GameBoy';
   color: white;
   size: medium;
   z-index: 51;
+}
+
+#about {
+  padding-top: 300px;
+}
+
+#about h1 {
+  font-family: 'Alkhemikal', sans-serif; 
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+  margin-bottom: 20px;
+}
+
+
+#about p {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 30px;
+  font-size: 10px;
+  margin: 0 100px 20px 100px;
+  padding: 0 30px 0 30px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5); 
+}
+
+#instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#instructions h1 {
+  font-family: 'Alkhemikal', sans-serif; 
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 80px;
+  margin: 20px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+}
+
+
+#instructions p {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 30px;
+  font-size: 10px;
+  margin: 0 80px 0 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+}
+
+#instructions h2 {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 0 80px 20px 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+}
+
+#instructions img {
+ margin:0px 0px 20px 0px;
+}
+
+
+#doorInstructions {
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#pickaxeInstructions {
+  justify-content: space-around;
+  margin-top: 20px;
+}
+#zImage {
+  margin-bottom: 40px;
+}
+
+#creatorButton {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease; 
+  text-decoration: none;
+  cursor:pointer;
+  color: #FFFFFF; 
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  font-family: 'Alkhemikal', sans-serif;
+}
+
+#creatorButton:hover {
+  transform: scale(1.1); 
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+#creatorButton:visited {
+  color: white;
+}
+
+#creators {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#creators h1 {
+  font-family: 'Alkhemikal', sans-serif; 
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 80px;
+  margin: 20px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+}
+
+#creators p {
+    font-family: 'Early GameBoy';
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    margin: 0 80px 0 80px;
+    text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+}
+
+#creators p {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 0 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with half opacity */
+  padding: 10px; /* Optional padding for p tags */
+}
+
+#instructions p {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 0 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with half opacity */
+  padding: 10px; /* Optional padding for p tags */
+}
+
+#about p {
+  font-family: 'Early GameBoy';
+  color: #FFFFFF;
+  line-height: 30px;
+  font-size: 20px;
+  margin: 0 80px;
+  text-shadow: 0 0 8px rgba(22, 22, 22, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with half opacity */
+  padding: 10px; /* Optional padding for p tags */
+}
+
+#creators {
+  margin-top: 160px;
+}
+
+#information {
+  margin-top: 70px;
+}
+
+#creators a {
+  margin-top: 50px;
 }

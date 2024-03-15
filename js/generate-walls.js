@@ -49,7 +49,7 @@ function Wall(orientation, column, row) {
   };
 
   let wall = document.createElement('img');
-  let fileType = orientation.toUpperCase();
+  let fileType = orientation[0].toUpperCase() + orientation[1] + orientation[2] + orientation[3];
 
   wall.id = 'wall-' + GameContents.walls.length;
   wall.className = 'wall';

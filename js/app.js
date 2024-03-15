@@ -46,3 +46,4 @@ let GameContents = {
 
 initializeLevel();
 renderPage();
+

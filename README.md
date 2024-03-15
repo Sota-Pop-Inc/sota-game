@@ -20,6 +20,21 @@ Early GameBoy: © 2024 Jimmy Campbell
   
 ### Music:  
 
+SciCodeDev: © 2018
+<https://freesound.org/people/SciCodeDev/sounds/442911/>
+
+EVRetro: © 2020
+<https://freesound.org/people/EVRetro/sounds/501102/>
+
+cabled_mess: © 2016
+<https://freesound.org/people/cabled_mess/sounds/350987/>
+
+SomeGuy22: © 2018
+<https://freesound.org/people/SomeGuy22/sounds/431329/>
+
+sonically_sound: © 2022
+<https://freesound.org/people/sonically_sound/sounds/624878/>
+
 ### Design Assets:
 
 Bubbles Character:  © 2024 CRAFTPIX.NET

@@ -4,6 +4,7 @@ function renderPage() {
   const mainCharHTML = document.getElementById('mainChar');
   const doorHTML = document.getElementById('door');
   const slimeHTML = document.getElementById('slime');
+  const levelHTML = document.getElementById('level');
 
   mainCharHTML.style.left = GameContents.mainChar.coordinates.x + 'px';
   mainCharHTML.style.top = GameContents.mainChar.coordinates.y + 'px';
@@ -11,6 +12,8 @@ function renderPage() {
   doorHTML.style.top = GameContents.door.coordinates.y + 'px';
   slimeHTML.style.left = GameContents.slime.coordinates.x + 'px';
   slimeHTML.style.top = GameContents.slime.coordinates.y + 'px';
+
+  levelHTML.textContent = 'Level ' + levelNum;
 
   if (GameContents.mainChar.inventory.key === false) {
     const keyHTML = document.getElementById('key');
